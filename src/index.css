@@ -553,4 +553,112 @@ img{
     display: none;
   }
 
+
+  /*MODAL PRODUCT*/
+  .modal-product-carrousel{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+  }
+
+  .modal-product-carrousel.active{
+    animation: showModalProduct .2s ease forwards;
+  }
+
+  @keyframes showModalProduct {
+    0%{
+      transform: scale(0);
+    }
+
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  .modal-product{
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-close{
+    align-self: flex-end;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .btn-close:hover{
+    color: var(--orange);
+  }
+
+  .product-show{
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .product-show img{
+    user-select: none;
+  }
+
+  .product-show svg{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+  }
+
+  .product-show svg:nth-child(1){
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .product-show svg:last-child{
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .product-show img{
+    border-radius: 10px;
+  }
+
+  .mini-gallery{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+
+  .mini-gallery img{
+    max-width: 80px;
+    border-radius: 10px;
+    transition: all .4s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    user-select: none;
+  }
+
+  .mini-gallery img:hover{
+    opacity: .5;
+  }
+
+  .mini-gallery img.active{
+    opacity: .5;
+    border: 2px solid var(--orange);
+  }
+
 }
